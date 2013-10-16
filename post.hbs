@@ -1,0 +1,27 @@
+{{!< default}}
+
+<article class="{{post_class}}">
+
+  <header>
+    <h1>{{{title}}}</h1>
+    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+  </header>
+
+  {{#post}}
+
+    {{content}}
+
+    <footer>
+
+      {{#if author}}
+        <section class="author">
+          <h2>{{author.name}}</h2>
+          <p>{{author.bio}}</p>
+        </section>
+      {{/if}}
+
+    </footer>
+
+  {{/post}}
+
+</article>
