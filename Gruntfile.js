@@ -9,7 +9,6 @@
       // Set up paths
       meta: {
         sassPath: 'assets/sass',
-        sassExt: '.sass', // .sass or .scss
         deployPath: 'assets/css'
       },
 
@@ -21,7 +20,7 @@
           files: [{
             expand: true,
             cwd: '<%= meta.sassPath %>',
-            src: ['*<%= meta.sassExt %>', '!_*<%= meta.sassExt %>'],
+            src: ['*.{sass,scss}', '!_*.{sass,scss}'],
             dest: '<%= meta.deployPath %>/',
             ext: '.css'
           }]
@@ -33,7 +32,7 @@
           livereload: true
         },
         sass: {
-          files: ['<%= meta.sassPath %>/**/*<%= meta.sassExt %>'],
+          files: ['<%= meta.sassPath %>/**/*.{sass,scss}'],
           tasks: ['sass']
         }
       }
