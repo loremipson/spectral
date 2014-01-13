@@ -15,6 +15,14 @@ Currently Ghost needs to be restarted for new themes to show up, so make sure yo
 
 ## Development
 
-Once Spectral is cloned down, change into the directory and run `npm install`. You should be familiiar with this, assuming you installed Ghost. Once your node modules have finished, run `grunt`. Grunt will start "watching" your files for changes.
+Once Spectral is cloned down, change into the directory and run:
 
-By default, Grunt watches for SASS files under the `assets/sass` directory with the .sass extension. If you'd like to change that, or use .scss instead, you can modify the `Gruntfile.js` accordingly. Any SASS file prefixed with an underscore won't be compiled as a separate .css file, so you can create and import them, making it more modular.
+    npm install
+
+You should be familiiar with this, assuming you installed Ghost. Once your node modules have finished, run:
+
+    grunt
+    
+Grunt will start "watching" your files for changes.
+
+By default, Grunt watches for SASS files under the `assets/sass` directory with the .sass extension. If you'd like to change that, you can modify the `Gruntfile.js` accordingly. Any SASS file prefixed with an underscore won't be compiled as a separate .css file, so you can create and import them, making it more modular.
